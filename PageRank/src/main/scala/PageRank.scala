@@ -11,9 +11,9 @@ import org.apache.spark.storage.StorageLevel
  * ...
  * where URL and their neighbors are separated by space(s).
  */
-object MinePageRank {
+object PageRank {
   def main(args: Array[String]) {
-    val sparkConf = new SparkConf().setAppName("MinePageRank")
+    val sparkConf = new SparkConf().setAppName("PageRank")
     var iters = args(1).toInt
     val ctx = new SparkContext(sparkConf)
     val lines = ctx.textFile(args(0), 1)
